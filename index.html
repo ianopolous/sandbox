@@ -46,6 +46,8 @@ Javascript.options.writable_streams)</p>
 	<textarea id="pageContent" style="width:800px; height:150px;">
 <html><body>
     <label id="jstest"> Javascript is not working.</label>
+	<p>
+        <label id="isolation"> Cross origin isolated: false.</label>
 	<h2>This is an Example html page served via service worker interception and writeable streams</h2>
 	<img src="burritocat.jpg">
 	<img src="https://grumpypumper.files.wordpress.com/2015/02/scared-cat.jpg">
@@ -55,6 +57,7 @@ Javascript.options.writable_streams)</p>
               top.document.getElementById("embedded").removeAttribute("sandbox");
 	      top.document.getElementById("escaped").innerText = "We escaped the iframe sandbox! Uh oh!";
 	   }
+	   document.getElementById("isolation").innerText = "Cross origin isolated: " + self.crossOriginIsolated;
    	</script>
 	<button onclick="escape()">Escape from sandbox</button>
 </body></html>
