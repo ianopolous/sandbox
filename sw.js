@@ -117,7 +117,7 @@ function returnFileData(fileData, filePath) {
               headers: [
                 ['content-length', arrayBuffer.byteLength],
 		['Content-Security-Policy', 'sandbox allow-scripts'],
-		['Content-Security-Policy', 'worker-src self']
+		['Content-Security-Policy', "worker-src 'self'"]
               ]
             });
     });
