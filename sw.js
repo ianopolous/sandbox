@@ -115,7 +115,8 @@ function returnFileData(fileData, filePath) {
             return new Response(arrayBuffer, {
               status: 200,
               headers: [
-                ['content-length', arrayBuffer.byteLength]
+                ['content-length', arrayBuffer.byteLength],
+		['Content-Security-Policy', 'sandbox allow-scripts']
               ]
             });
     });
