@@ -119,7 +119,7 @@ function returnFileData(fileData, filePath) {
 		['Content-Security-Policy', "sandbox allow-scripts; default-src 'self'; script-src 'self' 'unsafe-inline';"],
 		['Cross-Origin-Resource-Policy', 'same-origin'],
 		//['Cross-Origin-Embedder-Policy:','require-corp'],
-		['Cross-Origin-Opener-Policy:','same-origin']
+		//['Cross-Origin-Opener-Policy:','same-origin']
               ]
             });
     });
