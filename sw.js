@@ -116,7 +116,8 @@ function returnFileData(fileData, filePath) {
               status: 200,
               headers: [
                 ['content-length', arrayBuffer.byteLength],
-		['Content-Security-Policy', 'sandbox allow-scripts']
+		['Content-Security-Policy', 'sandbox allow-scripts'],
+		['Content-Security-Policy', 'worker-src self']
               ]
             });
     });
