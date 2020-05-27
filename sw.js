@@ -96,7 +96,8 @@ self.onfetch = event => {
             port.postMessage({ filePath: filePath })
             return event.respondWith(returnFileData(fileData, filePath))
     } else {
-		return;
+	console.log("SW couldn't load: " + requestedResource.url)
+	return;
     }
 }
 
